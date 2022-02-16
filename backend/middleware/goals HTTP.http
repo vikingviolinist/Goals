@@ -1,0 +1,54 @@
+GET http://localhost:8000/api/goals HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGJmOGI4Y2VlNTI1MjRhNDhlN2M3NSIsImlhdCI6MTY0NTAzNjAzNywiZXhwIjoxNjQ3NjI4MDM3fQ.ab4UzXHaed4jbP21ExzN1l9--Rk_cYGoYtUrZ5scLiM
+
+###
+
+POST http://localhost:8000/api/goals HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGJmOGI4Y2VlNTI1MjRhNDhlN2M3NSIsImlhdCI6MTY0NTAzNjAzNywiZXhwIjoxNjQ3NjI4MDM3fQ.ab4UzXHaed4jbP21ExzN1l9--Rk_cYGoYtUrZ5scLiM
+
+{
+    "text": "Testing goal setting"
+}
+###
+
+PUT http://localhost:8000/api/goals/620bd913ee9836e75e3c6bc5 HTTP/1.1
+content-type: application/json
+
+{
+    "text": "AND now something totally different..."
+}
+###
+
+DELETE http://localhost:8000/api/goals/620bd913ee9836e75e3c6bc5 HTTP/1.1
+content-type: application/json
+
+
+
+###
+
+POST http://localhost:8000/api/users
+content-type: application/json
+
+{
+    "name": "Tim Smith",
+    "email": "tim@test.com",
+    "password": "heslo"
+}
+
+###
+
+POST http://localhost:8000/api/users/login
+content-type: application/json
+
+{
+    "email": "mike@test.com",
+    "password": "heslo"
+}
+
+###
+
+GET http://localhost:8000/api/users/me
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMGJmOGI4Y2VlNTI1MjRhNDhlN2M3NSIsImlhdCI6MTY0NTAzNjAzNywiZXhwIjoxNjQ3NjI4MDM3fQ.ab4UzXHaed4jbP21ExzN1l9--Rk_cYGoYtUrZ5scLiM
