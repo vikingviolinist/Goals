@@ -1,1 +1,1 @@
-# Goal setting app in NodeJS and MongoDB
+# Goal setting app written in NodeJS and MongoDB
